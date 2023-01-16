@@ -22,3 +22,5 @@ vim.keymap.set("n", "<A-->", "<C-W>-", { silent = true, noremap = true })
 vim.keymap.set("n", "<A-+>", "<C-W>+", { silent = true, noremap = true })
 vim.keymap.set("n", "<A-<>", "<C-W><", { silent = true, noremap = true })
 
+vim.cmd("colorscheme carbonfox")
+

@@ -48,6 +48,7 @@ return require('packer').startup(function(use)
     branch = 'v2', -- optional but strongly recommended
   }
   
+  use "EdenEast/nightfox.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
