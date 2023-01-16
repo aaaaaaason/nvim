@@ -14,6 +14,9 @@ opt.swapfile = false
 opt.cursorline = true
 opt.mouse='a'
 
+vim.keymap.set("n", "<leader>s", ":w!<CR>", { silent = true, noremap = true })
+vim.keymap.set("n", "<C-l>", ":noh<CR>", { silent = true, noremap = true })
+
 vim.keymap.set("n", "<A->>", "<C-W>>", { silent = true, noremap = true })
 vim.keymap.set("n", "<A-->", "<C-W>-", { silent = true, noremap = true })
 vim.keymap.set("n", "<A-+>", "<C-W>+", { silent = true, noremap = true })

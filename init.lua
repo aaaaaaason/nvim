@@ -15,6 +15,8 @@ require 'basic'
 require 'plugin-config/nvim-tree'
 require 'plugin-config/telescope'
 require 'plugin-config/nvim-treesitter'
+require 'plugin-config/mason'
+require 'plugin-config/hop'
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
@@ -39,6 +41,13 @@ return require('packer').startup(function(use)
 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
+  use { 'williamboman/mason.nvim' }
+
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+  }
+  
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
