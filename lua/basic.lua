@@ -22,5 +22,8 @@ vim.keymap.set("n", "<A-->", "<C-W>-", { silent = true, noremap = true })
 vim.keymap.set("n", "<A-+>", "<C-W>+", { silent = true, noremap = true })
 vim.keymap.set("n", "<A-<>", "<C-W><", { silent = true, noremap = true })
 
-vim.cmd("colorscheme carbonfox")
+--vim.cmd("colorscheme carbonfox")
+--vim.cmd("colorscheme dracula")
+--vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme gruvbox")
 
