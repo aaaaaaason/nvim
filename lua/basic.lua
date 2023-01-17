@@ -14,16 +14,19 @@ opt.swapfile = false
 opt.cursorline = true
 opt.mouse='a'
 
-vim.keymap.set("n", "<leader>s", ":w!<CR>", { silent = true, noremap = true })
-vim.keymap.set("n", "<C-l>", ":noh<CR>", { silent = true, noremap = true })
+local keymap = vim.keymap
 
-vim.keymap.set("n", "<A->>", "<C-W>>", { silent = true, noremap = true })
-vim.keymap.set("n", "<A-->", "<C-W>-", { silent = true, noremap = true })
-vim.keymap.set("n", "<A-+>", "<C-W>+", { silent = true, noremap = true })
-vim.keymap.set("n", "<A-<>", "<C-W><", { silent = true, noremap = true })
+keymap.set("n", "<C-s>", ":w!<CR>", { silent = true, noremap = true })
+keymap.set("i", "<C-s>", "<Esc>:w!<CR>", { silent = true, noremap = true })
+keymap.set("n", "<C-l>", ":noh<CR>", { silent = true, noremap = true })
 
---vim.cmd("colorscheme carbonfox")
---vim.cmd("colorscheme dracula")
---vim.cmd("colorscheme onedark")
-vim.cmd("colorscheme gruvbox")
+keymap.set("n", "<A->>", "<C-W>>", { silent = true, noremap = true })
+keymap.set("n", "<A-->", "<C-W>-", { silent = true, noremap = true })
+keymap.set("n", "<A-+>", "<C-W>+", { silent = true, noremap = true })
+keymap.set("n", "<A-<>", "<C-W><", { silent = true, noremap = true })
 
+local cmd = vim.cmd
+--cmd("colorscheme carbonfox")
+--cmd("colorscheme dracula")
+--cmd("colorscheme onedark")
+cmd("colorscheme gruvbox")
