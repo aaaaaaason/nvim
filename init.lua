@@ -20,9 +20,6 @@ vim.cmd([[
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
 
   use {
     'nvim-tree/nvim-tree.lua',
@@ -73,7 +70,10 @@ return require('packer').startup(function(use)
   --use 'Mofiqul/dracula.nvim'
   --use 'navarasu/onedark.nvim'
   --use 'shaunsingh/solarized.nvim'
-  use { "ellisonleao/gruvbox.nvim" }
+  --use { "ellisonleao/gruvbox.nvim" }
+  --use { "catppuccin/nvim", as = "catppuccin" }
+  --use 'ayu-theme/ayu-vim'
+  use "aaaaaaason/darkplus.nvim"
 
   
   -- Automatically set up your configuration after cloning packer.nvim
@@ -90,4 +90,5 @@ return require('packer').startup(function(use)
   require 'plugin-config/mason'
   require 'plugin-config/hop'
   require 'plugin-config/lsp-zero'
+  --require 'plugin-config/one-dark'
 end)

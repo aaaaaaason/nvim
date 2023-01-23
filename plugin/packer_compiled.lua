@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/andychen/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["darkplus.nvim"] = {
+    loaded = true,
+    path = "/home/andychen/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
+    url = "https://github.com/aaaaaaason/darkplus.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/andychen/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -163,11 +168,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/andychen/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["solarized.nvim"] = {
-    loaded = true,
-    path = "/home/andychen/.local/share/nvim/site/pack/packer/start/solarized.nvim",
-    url = "https://github.com/shaunsingh/solarized.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,

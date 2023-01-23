@@ -43,5 +43,6 @@ local cmd = vim.cmd
 --cmd("colorscheme dracula")
 --cmd("colorscheme onedark")
 --cmd("colorscheme solarized")
-cmd("colorscheme gruvbox")
-
+--cmd("colorscheme gruvbox")
+--cmd("colorscheme ayu")
+cmd("colorscheme darkplus")
