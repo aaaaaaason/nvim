@@ -13,20 +13,35 @@ opt.autoindent = true
 opt.swapfile = false
 opt.cursorline = true
 opt.mouse='a'
+opt.clipboard = 'unnamedplus'
 
 local keymap = vim.keymap
+local kopt = { silent = true, noremap = true }
 
-keymap.set("n", "<C-s>", ":w!<CR>", { silent = true, noremap = true })
-keymap.set("i", "<C-s>", "<Esc>:w!<CR>", { silent = true, noremap = true })
-keymap.set("n", "<C-l>", ":noh<CR>", { silent = true, noremap = true })
+keymap.set("n", "<C-s>", ":w!<CR>", kopt)
+keymap.set("i", "<C-s>", "<Esc>:w!<CR>", kopt)
+keymap.set("n", "<C-l>", ":noh<CR>", kopt)
 
-keymap.set("n", "<A->>", "<C-W>>", { silent = true, noremap = true })
-keymap.set("n", "<A-->", "<C-W>-", { silent = true, noremap = true })
-keymap.set("n", "<A-+>", "<C-W>+", { silent = true, noremap = true })
-keymap.set("n", "<A-<>", "<C-W><", { silent = true, noremap = true })
+-- Better window navigation
+keymap.set("n", "<C-h>", "<C-w>h", kopt)
+keymap.set("n", "<C-j>", "<C-w>j", kopt)
+keymap.set("n", "<C-k>", "<C-w>k", kopt)
+keymap.set("n", "<C-l>", "<C-w>l", kopt)
+
+-- Resize with arrows
+keymap.set("n", "<C-Up>", ":resize -2<CR>", kopt)
+keymap.set("n", "<C-Down>", ":resize +2<CR>", kopt)
+keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", kopt)
+keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", kopt)
+
+-- Press jk fast to exit insert mode 
+keymap.set("i", "jk", "<ESC>", kopt)
+keymap.set("i", "kj", "<ESC>", kopt)
 
 local cmd = vim.cmd
 --cmd("colorscheme carbonfox")
 --cmd("colorscheme dracula")
 --cmd("colorscheme onedark")
+--cmd("colorscheme solarized")
 cmd("colorscheme gruvbox")
+

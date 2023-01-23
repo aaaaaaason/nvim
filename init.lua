@@ -11,20 +11,19 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-require 'basic'
-require 'plugin-config/nvim-tree'
-require 'plugin-config/telescope'
-require 'plugin-config/nvim-treesitter'
-require 'plugin-config/mason'
-require 'plugin-config/hop'
-require 'plugin-config/lsp-zero'
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
-  
+
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -73,11 +72,22 @@ return require('packer').startup(function(use)
   --use "EdenEast/nightfox.nvim"
   --use 'Mofiqul/dracula.nvim'
   --use 'navarasu/onedark.nvim'
+  --use 'shaunsingh/solarized.nvim'
   use { "ellisonleao/gruvbox.nvim" }
+
   
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
     require('packer').sync()
   end
+  
+  require 'basic'
+  require 'quickfix'
+  require 'plugin-config/nvim-tree'
+  require 'plugin-config/telescope'
+  require 'plugin-config/nvim-treesitter'
+  require 'plugin-config/mason'
+  require 'plugin-config/hop'
+  require 'plugin-config/lsp-zero'
 end)
