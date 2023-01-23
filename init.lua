@@ -60,11 +60,16 @@ return require('packer').startup(function(use)
     }
   } 
   
-
   use {
-    'phaazon/hop.nvim',
-    branch = 'v2', -- optional but strongly recommended
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+
+  --Use {
+  --  'phaazon/hop.nvim',
+  --  branch = 'v2', -- optional but strongly recommended
+  --}
+  use 'ggandor/lightspeed.nvim'
   
   --use "EdenEast/nightfox.nvim"
   --use 'Mofiqul/dracula.nvim'
@@ -73,7 +78,11 @@ return require('packer').startup(function(use)
   --use { "ellisonleao/gruvbox.nvim" }
   --use { "catppuccin/nvim", as = "catppuccin" }
   --use 'ayu-theme/ayu-vim'
-  use "aaaaaaason/darkplus.nvim"
+  --use "aaaaaaason/darkplus.nvim"
+  --use "lunarvim/darkplus.nvim"
+  --use 'martinsione/darkplus.nvim'
+  -- Packer:
+  use 'aaaaaaason/vscode.nvim'
 
   
   -- Automatically set up your configuration after cloning packer.nvim
@@ -88,7 +97,8 @@ return require('packer').startup(function(use)
   require 'plugin-config/telescope'
   require 'plugin-config/nvim-treesitter'
   require 'plugin-config/mason'
-  require 'plugin-config/hop'
+  --require 'plugin-config/hop'
   require 'plugin-config/lsp-zero'
   --require 'plugin-config/one-dark'
+  require 'plugin-config.lualine'
 end)

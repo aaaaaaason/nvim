@@ -14,6 +14,7 @@ opt.swapfile = false
 opt.cursorline = true
 opt.mouse='a'
 opt.clipboard = 'unnamedplus'
+opt.completeopt = { "menuone", "noselect" }
 
 local keymap = vim.keymap
 local kopt = { silent = true, noremap = true }
@@ -45,4 +46,4 @@ local cmd = vim.cmd
 --cmd("colorscheme solarized")
 --cmd("colorscheme gruvbox")
 --cmd("colorscheme ayu")
-cmd("colorscheme darkplus")
+cmd("colorscheme vscode")
