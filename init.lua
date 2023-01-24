@@ -95,6 +95,10 @@ return require('packer').startup(function(use)
   -- using packer.nvim
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
+  use { 'jose-elias-alvarez/null-ls.nvim' }
+  use {'kevinhwang91/nvim-bqf'}
+  -- Lua
+
   --use "EdenEast/nightfox.nvim"
   --use 'Mofiqul/dracula.nvim'
   --use 'navarasu/onedark.nvim'
@@ -129,4 +133,7 @@ return require('packer').startup(function(use)
   require 'plugin-config.gitsigns'
   require 'plugin-config.indent-blankline'
   require 'plugin-config.bufferline'
+  require 'plugin-config.null-ls'
+  require 'plugin-config.nvim-bqf'
 end)
+

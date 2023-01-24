@@ -21,7 +21,8 @@ local kopt = { silent = true, noremap = true }
 
 keymap.set("n", "<C-s>", ":w!<CR>", kopt)
 keymap.set("i", "<C-s>", "<Esc>:w!<CR>", kopt)
-keymap.set("n", "<C-l>", ":noh<CR>", kopt)
+keymap.set("n", "<C-c>", ":noh<CR>", kopt)
+keymap.set("n", "<esc><esc>", ":qa!<CR>", kopt)
 
 -- Better window navigation
 keymap.set("n", "<C-h>", "<C-w>h", kopt)

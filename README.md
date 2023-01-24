@@ -9,7 +9,9 @@
 - ./install.sh Hack
 - Change font of Gnome terminal profile to `Hack Nerd Font`
 
-
 ## Telescope
 - sudo apt install ripgrep
+
+## Nvim Treesitter
+- Need npm install tree-sitter-cli
 
