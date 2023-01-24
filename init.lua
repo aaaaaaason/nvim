@@ -45,7 +45,7 @@ return require('packer').startup(function(use)
       {'neovim/nvim-lspconfig'},             -- Required
       {'williamboman/mason.nvim'},           -- Optional
       {'williamboman/mason-lspconfig.nvim'}, -- Optional
-  
+
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},         -- Required
       {'hrsh7th/cmp-nvim-lsp'},     -- Required
@@ -53,13 +53,13 @@ return require('packer').startup(function(use)
       {'hrsh7th/cmp-path'},         -- Optional
       {'saadparwaiz1/cmp_luasnip'}, -- Optional
       {'hrsh7th/cmp-nvim-lua'},     -- Optional
-  
+
       -- Snippets
       {'L3MON4D3/LuaSnip'},             -- Required
       {'rafamadriz/friendly-snippets'}, -- Optional
     }
-  } 
-  
+  }
+
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -72,12 +72,29 @@ return require('packer').startup(function(use)
   use 'ggandor/lightspeed.nvim'
 
   use {"akinsho/toggleterm.nvim", tag = '*'}
-  
+
   use {
     'lewis6991/gitsigns.nvim',
     -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
   }
-  
+
+  use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+
+  use "lukas-reineke/indent-blankline.nvim"
+
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
+
+  -- using packer.nvim
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+
   --use "EdenEast/nightfox.nvim"
   --use 'Mofiqul/dracula.nvim'
   --use 'navarasu/onedark.nvim'
@@ -91,13 +108,13 @@ return require('packer').startup(function(use)
   -- Packer:
   use 'aaaaaaason/vscode.nvim'
 
-  
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
     require('packer').sync()
   end
-  
+
   require 'basic'
   require 'quickfix'
   require 'plugin-config/nvim-tree'
@@ -110,4 +127,6 @@ return require('packer').startup(function(use)
   require 'plugin-config.lualine'
   require 'plugin-config.toggleterm'
   require 'plugin-config.gitsigns'
+  require 'plugin-config.indent-blankline'
+  require 'plugin-config.bufferline'
 end)
