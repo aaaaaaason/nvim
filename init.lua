@@ -70,6 +70,13 @@ return require('packer').startup(function(use)
   --  branch = 'v2', -- optional but strongly recommended
   --}
   use 'ggandor/lightspeed.nvim'
+
+  use {"akinsho/toggleterm.nvim", tag = '*'}
+  
+  use {
+    'lewis6991/gitsigns.nvim',
+    -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+  }
   
   --use "EdenEast/nightfox.nvim"
   --use 'Mofiqul/dracula.nvim'
@@ -101,4 +108,6 @@ return require('packer').startup(function(use)
   require 'plugin-config/lsp-zero'
   --require 'plugin-config/one-dark'
   require 'plugin-config.lualine'
+  require 'plugin-config.toggleterm'
+  require 'plugin-config.gitsigns'
 end)
