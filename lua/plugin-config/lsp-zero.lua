@@ -27,3 +27,6 @@ lsp.ensure_installed({
 lsp.nvim_workspace()
 
 lsp.setup()
+
+vim.cmd [[autocmd BufWritePre * LspZeroFormat]]
+
