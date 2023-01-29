@@ -124,7 +124,6 @@ return require('packer').startup(function(use)
     require 'plugin-config/nvim-tree'
     require 'plugin-config/telescope'
     require 'plugin-config/nvim-treesitter'
-    require 'plugin-config/mason'
     --require 'plugin-config/hop'
     require 'plugin-config/lsp-zero'
     --require 'plugin-config/one-dark'

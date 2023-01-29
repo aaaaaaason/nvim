@@ -1,4 +1,3 @@
-
 local opt = vim.opt
 
 opt.number = true
@@ -12,7 +11,7 @@ opt.shiftwidth = 4
 opt.autoindent = true
 opt.swapfile = false
 opt.cursorline = true
-opt.mouse='a'
+opt.mouse = 'a'
 opt.clipboard = 'unnamedplus'
 opt.completeopt = { "menuone", "noselect" }
 
@@ -22,7 +21,7 @@ local kopt = { silent = true, noremap = true }
 keymap.set("n", "<C-s>", ":w!<CR>", kopt)
 keymap.set("i", "<C-s>", "<Esc>:w!<CR>", kopt)
 keymap.set("n", "<C-c>", ":noh<CR>", kopt)
-keymap.set("n", "<esc><esc>", ":qa!<CR>", kopt)
+--keymap.set("n", "<esc><esc>", ":qa!<CR>", kopt)
 
 -- Better window navigation
 keymap.set("n", "<C-h>", "<C-w>h", kopt)
@@ -36,7 +35,7 @@ keymap.set("n", "<C-Down>", ":resize +2<CR>", kopt)
 keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", kopt)
 keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", kopt)
 
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap.set("i", "jk", "<ESC>", kopt)
 keymap.set("i", "kj", "<ESC>", kopt)
 

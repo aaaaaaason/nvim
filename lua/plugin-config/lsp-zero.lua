@@ -5,10 +5,28 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-  -- Replace these with whatever servers you want to install
-  --'tsserver',
-  --'eslint',
-  --'sumneko_lua',
+    -- Replace these with whatever servers you want to install
+    --'tsserver',
+    --'eslint',
+    --'sumneko_lua',
+    'bashls',
+    'clangd',
+    'dockerls',
+    'eslint',
+    --'golangci-lint',
+    'gopls',
+    'graphql',
+    'html',
+    'jsonls',
+    'jdtls',
+    'tsserver',
+    'marksman',
+    'pyright',
+    --'rust-analyzer',
+    'sqlls',
+    'taplo',
+    'lemminx',
+    'yamlls',
 })
 
 -- Pass arguments to a language server
@@ -28,5 +46,4 @@ lsp.nvim_workspace()
 
 lsp.setup()
 
-vim.cmd [[autocmd BufWritePre * LspZeroFormat]]
-
+vim.cmd [[autocmd BufWritePre * if exists(":LspZeroFormat") | exe "LspZeroFormat" | endif]]
