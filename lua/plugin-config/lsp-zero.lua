@@ -5,15 +5,12 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-    -- Replace these with whatever servers you want to install
-    --'tsserver',
-    --'eslint',
-    --'sumneko_lua',
+    -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
     'bashls',
     'clangd',
     'dockerls',
     'eslint',
-    --'golangci-lint',
+    'golangci_lint_ls',
     'gopls',
     'graphql',
     'html',
@@ -21,8 +18,9 @@ lsp.ensure_installed({
     'jdtls',
     'tsserver',
     'marksman',
-    'pyright',
-    --'rust-analyzer',
+    --'pyright',
+    'jedi_language_server',
+    'rust_analyzer',
     'sqlls',
     'taplo',
     'lemminx',
