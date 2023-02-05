@@ -94,8 +94,10 @@ return require('packer').startup(function(use)
 
     use "gpanders/editorconfig.nvim"
 
+    use 'ThePrimeagen/harpoon'
+
     -- using packer.nvim
-    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+    --use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
 
     use { 'jose-elias-alvarez/null-ls.nvim' }
     use { 'kevinhwang91/nvim-bqf' }
@@ -133,7 +135,8 @@ return require('packer').startup(function(use)
     require 'plugin-config.toggleterm'
     require 'plugin-config.gitsigns'
     require 'plugin-config.indent-blankline'
-    require 'plugin-config.bufferline'
+    --require 'plugin-config.bufferline'
     require 'plugin-config.null-ls'
     require 'plugin-config.nvim-bqf'
+    require 'plugin-config/harpoon'
 end)
