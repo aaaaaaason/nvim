@@ -10,8 +10,8 @@ require('nvim-tree').setup {
         mappings = {
             list = {
                 -- For lightspeed
-                { key = "s", action = "" },
-                { key = "S", action = "" },
+                --{ key = "s", action = "" },
+                --{ key = "S", action = "" },
             },
         },
     },
