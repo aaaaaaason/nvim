@@ -39,6 +39,10 @@ keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", kopt)
 keymap.set("i", "jk", "<ESC>", kopt)
 keymap.set("i", "kj", "<ESC>", kopt)
 
+-- Toggle quickfix results
+keymap.set("n", "<S-j>", "<cmd>cn<CR>", kopt)
+keymap.set("n", "<S-k>", "<cmd>cp<CR>", kopt)
+
 local cmd = vim.cmd
 --cmd("colorscheme carbonfox")
 --cmd("colorscheme dracula")
