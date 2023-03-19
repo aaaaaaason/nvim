@@ -115,7 +115,7 @@ return require('packer').startup(function(use)
     --use 'martinsione/darkplus.nvim'
     -- Packer:
     use 'aaaaaaason/vscode.nvim'
-
+    use 'simrat39/symbols-outline.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
@@ -139,4 +139,5 @@ return require('packer').startup(function(use)
     require 'plugin-config.null-ls'
     require 'plugin-config.nvim-bqf'
     require 'plugin-config/harpoon'
+    require 'plugin-config/symbols-outline'
 end)
