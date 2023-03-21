@@ -19,8 +19,13 @@ require('nvim-tree').setup {
         dotfiles = false,
     },
     git = {
-        ignore = false
-    }
+        ignore = false,
+    },
+    actions = {
+        open_file = {
+            resize_window = false,
+        },
+    },
 }
 
 vim.keymap.set("n", "<Leader>t", ":NvimTreeFindFileToggle<CR>", { silent = true, noremap = true })
