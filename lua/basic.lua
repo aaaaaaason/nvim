@@ -18,6 +18,8 @@ opt.completeopt = { "menuone", "noselect" }
 local keymap = vim.keymap
 local kopt = { silent = true, noremap = true }
 
+vim.cmd [[ set grepprg=rg\ --vimgrep\ --hidden\ --glob\ \"!.git\"\ --follow\ ]]
+
 keymap.set("n", "<C-s>", ":w!<CR>", kopt)
 keymap.set("i", "<C-s>", "<Esc>:w!<CR>", kopt)
 keymap.set("n", "<C-c>", ":noh<CR>", kopt)
@@ -43,7 +45,7 @@ keymap.set("i", "kj", "<ESC>", kopt)
 keymap.set("n", "<S-j>", "<cmd>cn<CR>", kopt)
 keymap.set("n", "<S-k>", "<cmd>cp<CR>", kopt)
 
--- Paste behaviors 
+-- Paste behaviors
 keymap.set("x", "p", "P", kopt) -- not to copy virtual mode selected text
 keymap.set("n", "p", "\"0p", kopt)
 keymap.set("n", "P", "\"0P", kopt)
