@@ -19,6 +19,7 @@ local keymap = vim.keymap
 local kopt = { silent = true, noremap = true }
 
 vim.cmd [[ set grepprg=rg\ --vimgrep\ --hidden\ --glob\ \"!.git\"\ --follow\ ]]
+keymap.set("n", "<leader>r", ":silent grep ", { silent = false })
 
 keymap.set("n", "<C-s>", ":w!<CR>", kopt)
 keymap.set("i", "<C-s>", "<Esc>:w!<CR>", kopt)
