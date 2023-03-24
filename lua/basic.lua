@@ -47,9 +47,9 @@ keymap.set("n", "<S-j>", "<cmd>cn<CR>", kopt)
 keymap.set("n", "<S-k>", "<cmd>cp<CR>", kopt)
 
 -- Paste behaviors
-keymap.set("x", "p", "P", kopt) -- not to copy virtual mode selected text
-keymap.set("n", "p", "\"0p", kopt)
-keymap.set("n", "P", "\"0P", kopt)
+--keymap.set("x", "p", "P", kopt) -- not to copy virtual mode selected text
+--keymap.set("n", "p", "\"0p", kopt)
+--keymap.set("n", "P", "\"0P", kopt)
 
 local cmd = vim.cmd
 --cmd("colorscheme carbonfox")

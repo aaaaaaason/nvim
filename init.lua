@@ -69,7 +69,7 @@ return require('packer').startup(function(use)
     --  'phaazon/hop.nvim',
     --  branch = 'v2', -- optional but strongly recommended
     --}
-    use 'ggandor/lightspeed.nvim'
+    use 'ggandor/leap.nvim'
 
     use { "akinsho/toggleterm.nvim", tag = '*' }
 
@@ -140,4 +140,5 @@ return require('packer').startup(function(use)
     require 'plugin-config.nvim-bqf'
     require 'plugin-config/harpoon'
     require 'plugin-config/symbols-outline'
+    require 'plugin-config/leap'
 end)
