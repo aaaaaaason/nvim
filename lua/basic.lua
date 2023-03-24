@@ -18,8 +18,12 @@ opt.completeopt = { "menuone", "noselect" }
 local keymap = vim.keymap
 local kopt = { silent = true, noremap = true }
 
+-- Grep
 vim.cmd [[ set grepprg=rg\ --vimgrep\ --hidden\ --glob\ \"!.git\"\ --follow\ ]]
-keymap.set("n", "<leader>r", ":silent grep ", { silent = false })
+keymap.set("n", "<leader>g", ":silent grep ", { silent = false })
+
+-- Regs
+keymap.set("n", "<leader>r", ":reg<CR>", { silent = false })
 
 keymap.set("n", "<C-s>", ":w!<CR>", kopt)
 keymap.set("i", "<C-s>", "<Esc>:w!<CR>", kopt)
