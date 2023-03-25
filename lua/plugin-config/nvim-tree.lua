@@ -9,9 +9,9 @@ require('nvim-tree').setup {
     view = {
         mappings = {
             list = {
-                -- For lightspeed
-                --{ key = "s", action = "" },
-                --{ key = "S", action = "" },
+                -- For leap
+                { key = "s", action = "" },
+                { key = "S", action = "" },
             },
         },
     },
