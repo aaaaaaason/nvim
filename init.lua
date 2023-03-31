@@ -14,7 +14,7 @@ local packer_bootstrap = ensure_packer()
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    autocmd BufWritePost init.lua source <afile> | PackerCompile
   augroup end
 ]])
 
@@ -40,10 +40,16 @@ return require('packer').startup(function(use)
 
     use {
         'VonHeikemen/lsp-zero.nvim',
+        branch = 'v2.x',
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' }, -- Required
-            { 'williamboman/mason.nvim' }, -- Optional
+            { -- Optional
+                'williamboman/mason.nvim',
+                run = function()
+                    pcall(vim.cmd, 'MasonUpdate')
+                end,
+            },
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
@@ -51,12 +57,7 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
             { 'hrsh7th/cmp-buffer' }, -- Optional
             { 'hrsh7th/cmp-path' }, -- Optional
-            { 'saadparwaiz1/cmp_luasnip' }, -- Optional
-            { 'hrsh7th/cmp-nvim-lua' }, -- Optional
-
-            -- Snippets
             { 'L3MON4D3/LuaSnip' }, -- Required
-            { 'rafamadriz/friendly-snippets' }, -- Optional
         }
     }
 
@@ -123,7 +124,6 @@ return require('packer').startup(function(use)
         require('packer').sync()
     end
 
-    require 'basic'
     require 'quickfix'
     require 'plugin-config/nvim-tree'
     require 'plugin-config/telescope'
@@ -141,4 +141,5 @@ return require('packer').startup(function(use)
     require 'plugin-config/harpoon'
     require 'plugin-config/symbols-outline'
     require 'plugin-config/leap'
+    require 'basic'
 end)

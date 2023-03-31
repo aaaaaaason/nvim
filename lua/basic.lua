@@ -46,6 +46,16 @@ keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", kopt)
 keymap.set("i", "jk", "<ESC>", kopt)
 keymap.set("i", "kj", "<ESC>", kopt)
 
+-- Jump to front and back in insert mode
+keymap.set("i", "<C-a>", "<ESC>I", kopt)
+keymap.set("i", "<C-e>", "<ESC>A", kopt)
+
+-- Insert mode move cursor
+keymap.set("i", "<C-h>", "<Left>", kopt)
+keymap.set("i", "<C-j>", "<Down>", kopt)
+keymap.set("i", "<C-k>", "<Up>", kopt)
+keymap.set("i", "<C-l>", "<Right>", kopt)
+
 -- Toggle quickfix results
 keymap.set("n", "<S-j>", "<cmd>cn<CR>", kopt)
 keymap.set("n", "<S-k>", "<cmd>cp<CR>", kopt)
