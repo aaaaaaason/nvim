@@ -28,4 +28,5 @@ require('nvim-tree').setup {
     },
 }
 
-vim.keymap.set("n", "<Leader>t", ":NvimTreeFindFileToggle<CR>", { silent = true, noremap = true })
+vim.keymap.set("n", "<Leader>tt", ":NvimTreeToggle<CR>", { silent = true, noremap = true })
+vim.keymap.set("n", "<Leader>tf", ":NvimTreeFindFile<CR>", { silent = true, noremap = true })

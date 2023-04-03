@@ -12,7 +12,7 @@ require'nvim-treesitter.configs'.setup {
     "go",
     "gomod",
     "graphql",
-    "help",
+    --"help",
     "html",
     "ini",
     "java",
